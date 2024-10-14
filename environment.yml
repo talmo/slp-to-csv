@@ -6,3 +6,6 @@ channels:
 dependencies:
   - python
   - sleap-io
+  - pip
+  - pip:
+    - "--editable=.[dev]"  # pip install -e .[dev]
