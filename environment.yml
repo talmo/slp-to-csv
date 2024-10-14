@@ -1,0 +1,8 @@
+name: slp-to-csv
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python
+  - sleap-io
