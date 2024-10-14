@@ -96,9 +96,9 @@ jobs:
         run: |
           pytest --cov=slp_to_csv --cov-report=xml --durations=-1 tests/
 
-    #   - name: Upload coverage
-    #     uses: codecov/codecov-action@v4
-    #     with:
-    #       fail_ci_if_error: true
-    #       verbose: false
-    #       token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          fail_ci_if_error: true
+          verbose: false
+          token: ${{ secrets.CODECOV_TOKEN }}
