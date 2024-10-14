@@ -1,0 +1,11 @@
+name: slp-to-csv
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python
+  - sleap-io
+  - pip
+  - pip:
+    - "--editable=.[dev]"  # pip install -e .[dev]

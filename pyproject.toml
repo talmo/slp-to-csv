@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slp-to-csv"
+authors = [
+    {name = "Talmo Pereira", email = "talmo@salk.edu"}]
+description="SLP to CSV conversion."
+requires-python = ">=3.9"
+keywords = ["sleap"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "sleap-io"]
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = {attr = "slp_to_csv.__version__"}
+readme = {file = ["README.md"], content-type="text/markdown"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "pydocstyle",
+    "toml",
+    "twine",
+    "build"]
+
+[project.urls]
+Homepage = "https://sleap.ai"
+Repository = "https://github.com/talmo/slp-to-csv"
+
+[tool.setuptools.packages.find]
+exclude = ["site"]
+
+[tool.black]
+line-length = 88
+
+[pydocstyle]
+convention = "google"
+match-dir = "slp_to_csv"
